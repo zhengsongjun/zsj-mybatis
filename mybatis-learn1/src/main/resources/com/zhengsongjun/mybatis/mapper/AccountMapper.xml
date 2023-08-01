@@ -3,10 +3,10 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zhengsongjun.mybatis.mapper.AccountMapper">
-  <select id="selectAccount" resultType="com.zhengsongjun.mybatis.Account">
+  <select id="selectAccount" resultType="account">
     select * from account where id = #{id}
   </select>
-  <select id="selectAccountList" resultType="com.zhengsongjun.mybatis.Account">
+  <select id="selectAccountList" resultType="account">
     select * from account
   </select>
 <!--  insert-->

@@ -6,7 +6,8 @@
 
     <properties resource="jdbc.properties"></properties>
     <typeAliases>
-        <typeAlias type="com.zhengsongjun.mybatis.Account" alias="account"  />
+<!--        <typeAlias type="com.zhengsongjun.mybatis.Account" alias="account"  />-->
+        <package name="com.zhengsongjun.mybatis"/>
     </typeAliases>
     <environments default="development">
         <environment id="development">

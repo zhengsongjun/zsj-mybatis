@@ -6,4 +6,19 @@
   <select id="selectAccount" resultType="com.zhengsongjun.mybatis.Account">
     select * from account where id = #{id}
   </select>
+  <select id="selectAccountList" resultType="com.zhengsongjun.mybatis.Account">
+    select * from account
+  </select>
+<!--  insert-->
+  <insert id="insertAccount">
+    insert into account (name,count) values (#{name},#{count})
+  </insert>
+<!--  update-->
+  <update id="updateAccount">
+    update account set count = #{count} where id = #{id}
+  </update>
+<!--  delete-->
+  <delete id="deleteAccount">
+    delete from account where id = #{id}
+  </delete>
 </mapper>

@@ -6,8 +6,8 @@
 
     <properties resource="jdbc.properties"></properties>
     <typeAliases>
-<!--        <typeAlias type="com.zhengsongjun.mybatis.Account" alias="account"  />-->
-        <package name="com.zhengsongjun.mybatis"/>
+<!--        <typeAlias type="com.zhengsongjun.mybatis.pojo.Account" alias="account"  />-->
+        <package name="com.zhengsongjun.mybatis.pojo"/>
     </typeAliases>
     <environments default="development">
         <environment id="development">
@@ -22,5 +22,6 @@
     </environments>
     <mappers>
         <mapper resource="com/zhengsongjun/mybatis/mapper/AccountMapper.xml"/>
+        <mapper resource="com/zhengsongjun/mybatis/mapper/UserMapper.xml"/>
     </mappers>
 </configuration>

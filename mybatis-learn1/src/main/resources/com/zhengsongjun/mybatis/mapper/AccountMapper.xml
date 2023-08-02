@@ -9,6 +9,12 @@
   <select id="selectAccountList" resultType="account">
     select * from account
   </select>
+  <select id="selectAccountByName" resultType="account">
+    select * from account where name = #{name}
+  </select>
+  <select id="selectOrderBy" resultType="account">
+    select * from account order by #{property}
+  </select>
 <!--  insert-->
   <insert id="insertAccount">
     insert into account (name,count) values (#{name},#{count})

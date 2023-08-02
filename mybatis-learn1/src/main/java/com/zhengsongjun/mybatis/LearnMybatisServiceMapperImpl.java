@@ -1,6 +1,7 @@
 package com.zhengsongjun.mybatis;
 
 import com.zhengsongjun.mybatis.mapper.AccountMapper;
+import com.zhengsongjun.mybatis.pojo.Account;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;

@@ -1,4 +1,4 @@
-package com.zhengsongjun.mybatis;
+package com.zhengsongjun.mybatis.pojo;
 
 public class Account {
     private String name;

@@ -3,10 +3,16 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zhengsongjun.mybatis.mapper.UserMapper">
-    <select id="selectUserAll" resultType="user">
+    <resultMap id="resultUserMapper" type="user">
+        <id property="id" column="id" />
+        <result property="name" column="name" />
+        <result property="age" column="age" />
+        <result property="saleMoney" column="sale_money" />
+    </resultMap>
+    <select id="selectUserAll" resultMap="resultUserMapper">
         select * from user
     </select>
-    <select id="selectUserById" resultType="user">
+    <select id="selectUserById"  resultMap="resultUserMapper">
         select * from user where id = #{id}
     </select>
 

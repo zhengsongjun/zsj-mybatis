@@ -4,10 +4,14 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zhengsongjun.mybatis.mapper.UserMapper">
     <select id="selectUserAll" resultType="user">
-        select * from user
+        select
+        id , name , age , sale_money as saleMoney
+        from user
     </select>
     <select id="selectUserById" resultType="user">
-        select * from user where id = #{id}
+        select
+        id , name , age , sale_money as saleMoney
+        from user where id = #{id}
     </select>
 
     <insert id="insertUser">

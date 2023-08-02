@@ -5,6 +5,26 @@ public class User {
     private Integer id;
     private Integer age;
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + name + '\'' +
+                ", id=" + id +
+                ", age=" + age +
+                ", saleMoney=" + saleMoney +
+                '}';
+    }
+
+    public Integer getSaleMoney() {
+        return saleMoney;
+    }
+
+    public void setSaleMoney(Integer saleMoney) {
+        this.saleMoney = saleMoney;
+    }
+
+    private Integer saleMoney;
+
     public String getName() {
         return name;
     }
@@ -29,12 +49,5 @@ public class User {
         this.age = age;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "name='" + name + '\'' +
-                ", id=" + id +
-                ", age=" + age +
-                '}';
-    }
+
 }

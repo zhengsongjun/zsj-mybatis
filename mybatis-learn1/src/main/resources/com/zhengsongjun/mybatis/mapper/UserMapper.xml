@@ -20,4 +20,12 @@
         insert into user (name,age) values (#{name},#{age})
     </insert>
 
+    <select id="selectMySQLCase" resultMap="resultUserMapper" >
+        select * from user
+        where id != ''
+        <if test="user.saleMoney != null">and sale_money > #{user.saleMoney}</if>
+        <if test="user.age != null">and age > #{user.age}</if>
+    </select>
+
+
 </mapper>

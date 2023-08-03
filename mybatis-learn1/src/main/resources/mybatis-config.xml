@@ -26,5 +26,6 @@
     <mappers>
         <mapper resource="com/zhengsongjun/mybatis/mapper/AccountMapper.xml"/>
         <mapper resource="com/zhengsongjun/mybatis/mapper/UserMapper.xml"/>
+        <mapper resource="com/zhengsongjun/mybatis/mapper/MapMapper.xml"/>
     </mappers>
 </configuration>

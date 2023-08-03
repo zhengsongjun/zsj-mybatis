@@ -32,4 +32,32 @@ public class UserMapperTest extends TestCase {
         sqlSession.commit();
         sqlSession.close();
     }
+
+    @Test
+    public void testSelectMySQLCase(){
+        SqlSession sqlSession = SqlSessionUtil.getSqlSession();
+        UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+        System.out.println("第一个测试用例");
+
+        User user = new User();
+        List<User> userList = userMapper.selectMySQLCase(user);
+        for (User user1 : userList) {
+            System.out.println(user1);
+        }
+
+        System.out.println("第二个测试用例");
+        user.setSaleMoney(100);
+        List<User> userListSaleMoney = userMapper.selectMySQLCase(user);
+        for (User user1 : userListSaleMoney) {
+            System.out.println(user1);
+        }
+        user.setAge(15);
+        userMapper.selectMySQLCase(user);
+        System.out.println("第三个测试用例");
+        List<User> userListSaleMoneyAndAge = userMapper.selectMySQLCase(user);
+        for (User user1 : userListSaleMoneyAndAge) {
+            System.out.println(user1);
+        }
+        sqlSession.close();
+    }
 }
